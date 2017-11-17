@@ -449,6 +449,8 @@ double * simplex_method(std::vector<double> c, std::vector<double> b, std::vecto
 				if (strategy[i].find(it) != -1)
 				{
 					x_strategy.push_back(atof(strategy[i + 1].c_str()) * h); // Считаем интересующие стратегии в числовом виде
+					strategy[i].erase(strategy[i].begin());
+					index.push_back(atoi(strategy[i].c_str())); // Сохраняем индекс стратегии
 				}
 			}
 		}
