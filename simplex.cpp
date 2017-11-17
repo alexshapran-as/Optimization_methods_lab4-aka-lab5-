@@ -433,7 +433,8 @@ double * simplex_method(std::vector<double> c, std::vector<double> b, std::vecto
 		}
 		cout << sum;
 	}
-
+	index.clear();
+	
 	if (strategy[0].find("V") != -1)
 	{
 		h = 1. / (atof(strategy[strategy.size() - 1].c_str()));
